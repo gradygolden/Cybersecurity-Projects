@@ -45,7 +45,7 @@ For the "BEFORE" metrics, all resources were originally deployed, exposed to the
 
 For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL traffic with the exception of my IP address, and all other resources were protected by their built-in firewalls as well as Private Endpoint.
 
-## Attack Maps (prior to securing environment)
+## Attack Maps (Before Hardening Environment)
 
 
 ![linux ssh 24 hour before](https://github.com/gradygolden/Cybersecurity-Projects/assets/157150281/f466c245-c346-431f-8ef8-c5148b56a15a)
@@ -61,6 +61,50 @@ For the "AFTER" metrics, Network Security Groups were hardened by blocking ALL t
 ![windows rdp 24 hour before](https://github.com/gradygolden/Cybersecurity-Projects/assets/157150281/6381d519-7db5-471b-877c-43d216476f8b)
 
 
+## Metrics (Before Hardening Environment)
+
+The following table shows the metrics I measured in my insecure environment for 24 hours:
+
+Start Time 2024-03-27T22:13:26.8024321Z
+
+Stop Time 2024-03-28T22:13:26.8024321Z
+
+| Metric                                                         | Count
+| ---------------------------------------------------------------| -----
+| SecurityEvent (Windows VM)                                     | 99212
+| Syslog (Linux VM)                                              | 19983
+| SecurityAlert (Microsoft Defender for Cloud)                   | 7
+| SecurityIncident (Sentinel Incidents)                          | 245
+| AzureNetworkAnalytics_CL (NSG Inbound Malicious Flows Allowed) | 2611
+
+
+## Metrics (After Hardening Environment)
+
+The following table shows the metrics I measured in my environment for 24 hours after applying proper controls:
+
+Start Time 2024-03-31T02:58:32.0333992Z
+
+Stop Time 2024-04-01T02:58:32.0333992Z
+
+| Metric                                                         | Count
+| ---------------------------------------------------------------| -----
+| SecurityEvent (Windows VM)                                     | 24010
+| Syslog (Linux VM)                                              | 1
+| SecurityAlert (Microsoft Defender for Cloud)                   | 0
+| SecurityIncident (Sentinel Incidents)                          | 0
+| AzureNetworkAnalytics_CL (NSG Inbound Malicious Flows Allowed) | 0
+
+## Results
+
+The following table shows change percentages from before and after hardening:
+
+| Metric                                                         | Change after securing environment
+| ---------------------------------------------------------------| -----
+| SecurityEvent (Windows VM)                                     | -75.80%
+| Syslog (Linux VM)                                              | -99.99%
+| SecurityAlert (Microsoft Defender for Cloud)                   | -100.00%
+| SecurityIncident (Sentinel Incidents)                          | -100.00%
+| AzureNetworkAnalytics_CL (NSG Inbound Malicious Flows Allowed) | -100.00%
 
 
 
