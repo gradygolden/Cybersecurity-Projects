@@ -1,6 +1,6 @@
 # Implementing a SOC and Honeynet in Azure
 
-*NOTE- this page is under construction and being updated with images.
+*NOTE- this page is under construction and being updated with images to better demonstrate the architecture.
 
 ## Introduction and Architecture 
 In this project, I created a SOC and honeynet using multiple resources in Microsoft Azure and ingested their logs into a Log Analytics Workspace, which was then connected to Microsoft Sentinel acting as a SIEM. 
@@ -76,6 +76,14 @@ Stop Time 2024-03-28T22:13:26.8024321Z
 | SecurityAlert (Microsoft Defender for Cloud)                   | 7
 | SecurityIncident (Sentinel Incidents)                          | 245
 | AzureNetworkAnalytics_CL (NSG Inbound Malicious Flows Allowed) | 2611
+
+
+## Attack Maps (After Hardening Environment)
+
+
+All map queries actually returned no results due to no instances of malicious activity for the 24 hour period after hardening.
+
+![image](https://github.com/gradygolden/Cybersecurity-Projects/assets/157150281/1e74f04d-e84c-4f31-84fc-37970b0070d0)
 
 
 ## Metrics (After Hardening Environment)
