@@ -114,5 +114,15 @@ The following table shows change percentages from before and after hardening:
 | SecurityIncident (Sentinel Incidents)                          | -100.00%
 | AzureNetworkAnalytics_CL (NSG Inbound Malicious Flows Allowed) | -100.00%
 
+## Incidents + Incident Response
+
+Numerous incidents were triggered after leaving the environment open to traffic, most of which were brute force attempts. I was able to practice triaging alerts and investigating such incidents in Microsoft Sentinel, assigning them to myself, and discovering more about them. Upon diving into a generated incident and completing investigation into it, I could discover the attacker IP addresses, where they were coming from, and other related incidents/alerts coming from the same entities. After, I could then close out the alert and move onto another.
+
+![image](https://github.com/gradygolden/Cybersecurity-Projects/assets/157150281/7fd41886-d311-4bbe-80f8-e851dfdf7c7c)
+
+![image](https://github.com/gradygolden/Cybersecurity-Projects/assets/157150281/b39b89ec-a252-4203-b7c5-1c96340fb6fe)
+
+
+
 
 
