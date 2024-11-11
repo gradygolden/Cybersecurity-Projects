@@ -1,6 +1,8 @@
 # Implementing a SOC and Honeynet in Azure
 
-*NOTE- this page is under construction and being updated with images to better demonstrate the architecture.
+![Cloud Honeynet / SOC](https://i.imgur.com/ZWxe03e.jpg)
+
+
 
 ## Introduction and Architecture 
 In this project, I created a SOC and honeynet using multiple resources in Microsoft Azure and ingested their logs into a Log Analytics Workspace, which was then connected to Microsoft Sentinel acting as a SIEM. 
